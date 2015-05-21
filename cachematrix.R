@@ -2,6 +2,10 @@
 ## functions do
 
 ## Write a short comment describing this function
+## 
+## makeCacheMatrix return a list of function which allow to set / get a matrix
+## and its inverse (setInverse / getInverse)
+## Moreover in its environment is stored the inverse of the matrix (m_inverse)
 
 makeCacheMatrix <- function(x = matrix()) {
   m_inverse <- NULL
@@ -22,6 +26,11 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+##
+## cacheSolve receive in input a list being build with macheCacheMatrix
+## if the inverse of the matrix is already stored into the parent's environment
+## it is returned, otherwise the inverse is calculate, stored into parent's environment
+## and returned
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
